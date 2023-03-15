@@ -1,26 +1,31 @@
 import React from "react";
+import Card from "./card.jsx";
+import Navbar from "./navbar.jsx";
+import Jumbotron from "./jumbotron.jsx";
+import Footer from "./footer.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+//TODO ES UN COMPONENTE
+//un componente es una función que inicia con Mayúscula
+//los componentes son funciones que RETORNAN HTML
+//los componentes se llaman como si fueran una etiqueta HTML
+//Componentes tienes que estar iniciados en Mayuscula
+// ctrl s guarda
 
-//create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
-
-export default Home;
+function Cimiento (){
+    return <div>
+      <Navbar/>
+      <Jumbotron/>
+      <div>
+      </div>
+      
+        <div className="row">
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+        </div>
+        <Footer/>
+    </div>
+}
+//equivalente a module.exports
+export default Cimiento;
